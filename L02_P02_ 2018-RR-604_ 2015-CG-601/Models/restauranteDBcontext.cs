@@ -16,6 +16,9 @@ namespace L02_P02__2018_RR_604__2015_CG_601.Models
 
         public DbSet<pedidos> pedidos { get; set;}
 
-        public DbSet<platos> platos { get; set;}        
+        public DbSet<platos> platos { get; set;}
+        public DbSet<motoristas> motoristas { get; set; }
+        public DbSet<clientes> clientes { get; set; }
+
     }
 }
