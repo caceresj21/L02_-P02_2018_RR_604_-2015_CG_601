@@ -1,8 +1,17 @@
+using L02_P02__2018_RR_604__2015_CG_601.Models;
+using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+//Inyeccion por dependencia del string  de conexion al contexto
+builder.Services.AddDbContext<restauranteDBcontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("equiposDbConnection")
+    )
+    );
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
